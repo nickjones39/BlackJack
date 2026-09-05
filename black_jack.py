@@ -24,16 +24,33 @@ def deal_card():
 
 def calculate_score(cards):
     """Take a list of cards and return the score calculated from the cards"""
-
-    # Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
-    # Hint 8: Inside calculate_score() check for an 11 (ace). If the score is already over 21, remove the 11 and replace it with a 1. You might need to look up append() and remove().
-    # Hint 13: Create a function called compare() and pass in the user_score and computer_score. If the computer and user both have the same score, then it's a draw.
-    # If the computer has a blackjack (0), then the user loses. If the user has a blackjack (0), then the user wins. If the user_score is over 21, then the user loses.
-    # If the computer_score is over 21, then the computer loses. If none of the above, then the player with the highest score wins.
-
+    # Check for a blackjack (a hand with only 2 cards: ace + 10)
+    if sum(cards) == 21 and len(cards) == 2:
+        return 0
+    
+    # Check for an 11 (ace) and replace with 1 if score is over 21
+    if 11 in cards and sum(cards) > 21:
+        cards.remove(11)
+        cards.append(1)
+        
+    return sum(cards)
 
 def compare(user_score, computer_score):
-
+    """Compare user and computer scores to determine the winner."""
+    if user_score == computer_score:
+        return "PUSH"
+    elif computer_score == 0:
+        return "You lose, opponent has Blackjack"
+    elif user_score == 0:
+        return "You win with a Blackjack"
+    elif user_score > 21:
+        return "You went over. You lose"
+    elif computer_score > 21:
+        return "Opponent went over. You win"
+    elif user_score > computer_score:
+        return "You win"
+    else:
+        return "You lose"
 
 
 def play_game():
