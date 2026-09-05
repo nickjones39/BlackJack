@@ -11,11 +11,17 @@
 
 
 import random
-from art import logo
+
+try:
+    from art import logo
+except ImportError:
+    logo = "====== BLACKJACK ======"
 
 
 def deal_card():
     """Returns a random card from the deck."""
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    return random.choice(cards)
 
 # Hint 6: Create a function called calculate_score() that takes a List of cards as input
 # and returns the score.
@@ -50,7 +56,6 @@ def compare(user_score, computer_score):
 
 
 def play_game():
-
     # Hint 5: Deal the user and computer 2 cards each using deal_card()
     # Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
     # Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List.
