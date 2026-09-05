@@ -56,6 +56,7 @@ def compare(user_score, computer_score):
 
 
 def play_game():
+    return "Deal"
     # Hint 5: Deal the user and computer 2 cards each using deal_card()
     # Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
     # Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List.
