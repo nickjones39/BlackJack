@@ -140,6 +140,8 @@ def play_game():
 # Main program
 def main():
 
+    print(logo)
+
     while True:
 
         answer = input("Do you want to play Blackjack? (y/n): ")
