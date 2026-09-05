@@ -65,9 +65,6 @@ def compare(user_score, computer_score):
     # Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
     # Hint 12: Once the user is done, it's time to let the computer play. The computer should keep drawing cards as long as it has a score less than 17.
 def play_game():
-    # Show the game logo at the start of a new game
-    print(logo)
-
     # Create empty lists for the player's and computer's cards
     user_cards = []
     computer_cards = []
@@ -142,6 +139,8 @@ def play_game():
 
 # Main program
 def main():
+
+    print(logo)
 
     while True:
 
