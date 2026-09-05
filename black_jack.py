@@ -33,7 +33,20 @@ def calculate_score(cards):
 
 
 def compare(user_score, computer_score):
-
+    if user_score == computer_score:
+        return "Draw"
+    elif computer_score == 0:
+        return "You lose"
+    elif user_score == 0:
+        return "You win"
+    elif user_score > 21:
+        return "You lose"
+    elif computer_score > 21:
+        return "You win"
+    elif user_score > computer_score:
+        return "You win"
+    else:
+        return "You lose"
 
 
 def play_game():
