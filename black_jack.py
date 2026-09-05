@@ -42,7 +42,6 @@ def calculate_score(cards):
     return sum(cards)
 
 def compare(user_score, computer_score):
-<<<<<<< HEAD
     """Compare user and computer scores to determine the winner."""
     if user_score == computer_score:
         return "PUSH"
@@ -54,26 +53,10 @@ def compare(user_score, computer_score):
         return "You went over. You lose"
     elif computer_score > 21:
         return "Opponent went over. You win"
-=======
-    if user_score == computer_score:
-        return "Draw"
-    elif computer_score == 0:
-        return "You lose"
-    elif user_score == 0:
-        return "You win"
-    elif user_score > 21:
-        return "You lose"
-    elif computer_score > 21:
-        return "You win"
->>>>>>> 30d43d406964d72e022a6d8330bba747cee230c4
     elif user_score > computer_score:
         return "You win"
     else:
         return "You lose"
-<<<<<<< HEAD
-=======
-
->>>>>>> 30d43d406964d72e022a6d8330bba747cee230c4
 
     # Hint 5: Deal the user and computer 2 cards each using deal_card()
     # Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
