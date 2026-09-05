@@ -65,5 +65,27 @@ def play_game():
 
 
 # Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.
-while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
-    play_game()
+
+# Main program
+def main():
+
+    while True:
+
+        answer = input("Do you want to play Blackjack? (y/n): ")
+
+        if answer == "y":
+
+            play_game()
+
+        elif answer == "n":
+
+            print("Goodbye!")
+            break
+
+        else:
+
+            print("Please enter y or n.")
+
+
+if __name__ == "__main__":
+    main()
